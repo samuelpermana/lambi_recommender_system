@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "type": "Tshirts",
+    "color_hex": "#FF5733",
+    "image": "tshirt_image1.jpg"
+  },
+  {
+    "id": 2,
+    "type": "Shirts",
+    "color_hex": "#3366FF",
+    "image": "shirt_image1.jpg"
+  },
+  {
+    "id": 3,
+    "type": "Jackets",
+    "color_hex": "#33FF33",
+    "image": "jacket_image1.jpg"
+  },
+  {
+    "id": 4,
+    "type": "Dresses",
+    "color_hex": "#FF33CC",
+    "image": "dress_image1.jpg"
+  },
+  {
+    "id": 5,
+    "type": "Longsleeve",
+    "color_hex": "#FFFF33",
+    "image": "longsleeve_image1.jpg"
+  },
+  {
+    "id": 6,
+    "type": "Hoodie",
+    "color_hex": "#9900CC",
+    "image": "hoodie_image1.jpg"
+  },
+  {
+    "id": 7,
+    "type": "Tops",
+    "color_hex": "#FF9900",
+    "image": "tops_image1.jpg"
+  },
+  {
+    "id": 8,
+    "type": "Skirts",
+    "color_hex": "#FF3366",
+    "image": "skirt_image1.jpg"
+  },
+  {
+    "id": 9,
+    "type": "Jeans",
+    "color_hex": "#0066CC",
+    "image": "jeans_image1.jpg"
+  },
+  {
+    "id": 10,
+    "type": "Pants",
+    "color_hex": "#339933",
+    "image": "pants_image1.jpg"
+  },
+  {
+    "id": 11,
+    "type": "Shorts",
+    "color_hex": "#FFCC00",
+    "image": "shorts_image1.jpg"
+  }
+]
