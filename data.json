@@ -1,68 +1,38 @@
-[
-  {
-    "id": 1,
-    "type": "Tshirts",
-    "color_hex": "#FF5733",
-    "image": "tshirt_image1.jpg"
-  },
-  {
-    "id": 2,
-    "type": "Shirts",
-    "color_hex": "#3366FF",
-    "image": "shirt_image1.jpg"
-  },
-  {
-    "id": 3,
-    "type": "Jackets",
-    "color_hex": "#33FF33",
-    "image": "jacket_image1.jpg"
-  },
-  {
-    "id": 4,
-    "type": "Dresses",
-    "color_hex": "#FF33CC",
-    "image": "dress_image1.jpg"
-  },
-  {
-    "id": 5,
-    "type": "Longsleeve",
-    "color_hex": "#FFFF33",
-    "image": "longsleeve_image1.jpg"
-  },
-  {
-    "id": 6,
+{
+  "34034caf.JPG": {
+    "image_path": "./download/34034caf.JPG",
     "type": "Hoodie",
-    "color_hex": "#9900CC",
-    "image": "hoodie_image1.jpg"
+    "color": "FF0000",
+    "img_link": "https://storage.googleapis.com/cc-lambi-public/34034caf.JPG"
   },
-  {
-    "id": 7,
-    "type": "Tops",
-    "color_hex": "#FF9900",
-    "image": "tops_image1.jpg"
-  },
-  {
-    "id": 8,
-    "type": "Skirts",
-    "color_hex": "#FF3366",
-    "image": "skirt_image1.jpg"
-  },
-  {
-    "id": 9,
+  "56c8f4eb.JPG": {
+    "image_path": "./download/56c8f4eb.JPG",
     "type": "Jeans",
-    "color_hex": "#0066CC",
-    "image": "jeans_image1.jpg"
+    "color": "FF0000",
+    "img_link": "https://storage.googleapis.com/cc-lambi-public/56c8f4eb.JPG"
   },
-  {
-    "id": 10,
+  "642f8ba6.JPG": {
+    "image_path": "./download/642f8ba6.JPG",
+    "type": "Tshirts",
+    "color": "FF0000",
+    "img_link": "https://storage.googleapis.com/cc-lambi-public/642f8ba6.JPG"
+  },
+  "8159146d.JPG": {
+    "image_path": "./download/8159146d.JPG",
+    "type": "Hoodie",
+    "color": "FF0000",
+    "img_link": "https://storage.googleapis.com/cc-lambi-public/8159146d.JPG"
+  },
+  "dc98fe29.JPG": {
+    "image_path": "./download/dc98fe29.JPG",
     "type": "Pants",
-    "color_hex": "#339933",
-    "image": "pants_image1.jpg"
+    "color": "FF0000",
+    "img_link": "https://storage.googleapis.com/cc-lambi-public/dc98fe29.JPG"
   },
-  {
-    "id": 11,
+  "dfc89efe.JPG": {
+    "image_path": "./download/dfc89efe.JPG",
     "type": "Shorts",
-    "color_hex": "#FFCC00",
-    "image": "shorts_image1.jpg"
+    "color": "FF0000",
+    "img_link": "https://storage.googleapis.com/cc-lambi-public/dfc89efe.JPG"
   }
-]
+}

@@ -220,25 +220,26 @@ def get_combinations(data):
     all_combinations = []
     recommendations = []
 
-    for item in data:
-        if item["type"] in ["Tshirts", "Shirts", "Jackets", "Dresses", "Longsleeve", "Hoodie", "Tops"]:
-            tops.append(item)
+    for item_key, item_value in data.items():
+        if item_value["type"] in ["Tshirts", "Shirts", "Jackets", "Dresses", "Longsleeve", "Hoodie", "Tops"]:
+            tops.append(item_value)
         else:
-            bottoms.append(item)
+            bottoms.append(item_value)
 
     for top in tops:
         for bottom in bottoms:
             all_combinations.append({"top": top, "bottom": bottom})
 
     for combination in all_combinations:
-        top_id = combination["top"]["id"]
-        bottom_id = combination["bottom"]["id"]
+        top_id = combination["top"]["image_path"].split("/")[-1]
+        bottom_id = combination["bottom"]["image_path"].split("/")[-1]
         top_type = combination["top"]["type"]
         bottom_type = combination["bottom"]["type"]
+
         if top_type != "Dresses":
             result_outfit_type = recommend_outfit(top_type, bottom_type)
-        result_color_combination = is_good_combination(combination["top"]["color_hex"],
-                                                       combination["bottom"]["color_hex"])
+        result_color_combination = is_good_combination(combination["top"]["color"],
+                                                       combination["bottom"]["color"])
 
         if result_color_combination:
             message = f"Kombinasi {top_type} dan {bottom_type} akan menampilkan look {result_outfit_type} dan {result_color_combination}"
@@ -288,14 +289,14 @@ def get_combinations(data):
                 "top": {
                     "id": top_id,
                     "type": top_type,
-                    "color_hex": combination["top"]["color_hex"],
-                    "image": combination["top"]["image"]
+                    "color_hex": combination["top"]["color"],
+                    "image": combination["top"]["image_path"]
                 },
                 "bottom": {
                     "id": bottom_id,
                     "type": bottom_type,
-                    "color_hex": combination["bottom"]["color_hex"],
-                    "image": combination["bottom"]["image"]
+                    "color_hex": combination["bottom"]["color"],
+                    "image": combination["bottom"]["image_path"]
                 },
                 "message": message
             }
