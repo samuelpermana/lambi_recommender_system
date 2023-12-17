@@ -1,14 +1,4 @@
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
 import colorsys
-
-def display_color_hex(color_hex):
-    color_rgb = [int(color_hex[i:i+2], 16) / 255.0 for i in (1, 3, 5)]
-    fig, ax = plt.subplots(figsize=(1, 1))
-    ax.add_patch(patches.Rectangle((0, 0), 1, 1, facecolor=color_rgb, edgecolor='none'))
-    ax.axis('off')
-    plt.title(f'Color: {color_hex}')
-    plt.show()
 
 def hex_to_rgb(hex_color):
     hex_color = hex_color.lstrip('#')
@@ -273,11 +263,40 @@ def get_combinations(data):
             elif (result_outfit_type == "Smart Casual" and (color_theory == 'netrals')):
                 message = f"Kombinasi {top_type} dan {bottom_type} akan menghasilkan look Smart Casual dengan kombinasi warna yang baik dan akan menimbulkan kesan rapi dan profesional namun lebih santai karena kombinasi tersebut termasuk dalam teori warna {color_theory}"
             elif (result_outfit_type == "Casual" and (color_theory == 'netrals')):
-                message = f"Kombinasi {top_type} dan {bottom_type} akan menghasilkan look Casual dengan kombinasi warna yang baik dan akan menimbulkan kesan santai dan bersih karena kombinasi tersebut termasuk dalam teori warna {color_theory}"
+                message = f"Kombinasi {top_type} dan {bottom_type} akan memberikan tampilan Casual yang santai namun tetap stylish. Kombinasi warna yang seragam menciptakan kesan yang harmonis dan dapat menjadi pilihan yang sempurna untuk aktivitas sehari-hari, seperti hangout dengan teman atau kegiatan santai lainnya."
+            elif (result_outfit_type == "Formal" and (color_theory == 'netral')):
+                message = f"Kombinasi {top_type} dan {bottom_type} akan menghasilkan look Formal, kombinasi warna netral dan yang lebih berwarna akan menambah kesan elegan. Padu-padan warna netral dengan yang lebih berani akan memberikan kesan menarik dan cocok untuk acara formal yang lebih santai."
+            elif (result_outfit_type == "Smart Casual" and (color_theory == 'netral')):
+                message = f"Kombinasi {top_type} dan {bottom_type} akan menghasilkan look Smart Casual dengan gabungan warna netral dan yang lebih berwarna akan menambah kesan santai dan tetap terlihat cerdas. Cocok untuk acara semi-formal atau pertemuan santai bersama teman-teman."
+            elif (result_outfit_type == "Casual" and (color_theory == 'netral')):
+                message = f"Kombinasi {top_type} dan {bottom_type} akan menciptakan tampilan Casual yang menarik dengan kombinasi warna netral dan berwarna. Paduan warna ini memberikan kesan santai namun tetap stylish, cocok untuk berbagai kesempatan seperti hangout atau acara santai bersama teman-teman."
+            elif (result_outfit_type == "Formal" and (color_theory == 'monokromatik')):
+                message = f"Tampilan formal dengan warna monokromatik pada {top_type} dan {bottom_type} menciptakan kesan elegan dan rapi. Pilih nuansa dari satu parent warna untuk penampilan yang kohesif. Ideal untuk acara resmi seperti pertemuan bisnis atau pesta formal yang memerlukan keanggunan dan keseragaman warna."
+            elif (result_outfit_type == "Smart Casual" and (color_theory == 'monokromatik')):
+                message = f"Kombinasi {top_type} dan {bottom_type} akan menghasilkan look Smart Casual dengan pilihan nuansa dari satu parent warna akan menghasilkan tampilan yang santai namun tetap stylish. Cocok untuk acara semi-formal atau pertemuan santai bersama teman-teman."
+            elif (result_outfit_type == "Casual" and (color_theory == 'monokromatik')):
+                message = f"Tampilan {result_outfit_type} yang effortlessly stylish bisa diciptakan dengan kombinasi {top_type} dan {bottom_type} dalam warna {color_theory}. Pilih nuansa dari satu parent warna untuk tampilan santai yang tetap terlihat trendi. Cocok untuk berbagai aktivitas sehari-hari dan pertemuan santai bersama teman-teman."
+            elif (result_outfit_type == "Formal" and (color_theory == 'analogous')):
+                message = f"Untuk tampilan formal yang mencolok, pertimbangkan kombinasi {top_type} dan {bottom_type} dengan warna analogous. Memilih warna sejajar akan memberikan kesan yang kohesif namun tetap menarik."
+            elif (result_outfit_type == "Smart Casual" and (color_theory == 'analogous')):
+                message = f"Kombinasi {top_type} dan {bottom_type} akan menghasilkan look Smart Casual dengan paduan nuansa yang berdekatan pada roda warna untuk menciptakan kombinasi yang serasi dan memancarkan kesan yang cerdas namun santai. Ideal untuk acara semi-formal dan pertemuan yang santai."
+            elif (result_outfit_type == "Casual" and (color_theory == 'analogous')):
+                message = f"Kombinasi {top_type} dan {bottom_type} akan menciptakan tampilan Casual yang menarik dengan pilihan warna-warna yang berdekatan satu sama lain di roda warna untuk menciptakan penampilan yang menyatu dan penuh keceriaan. Cocok untuk acara santai atau kegiatan sehari-hari yang ingin tetap tampil stylish."
 
             recommendation = {
-                "top_id": top_id,
-                "bottom_id": bottom_id,
+                "recommendation_id": len(recommendations) + 1,
+                "top": {
+                    "id": top_id,
+                    "type": top_type,
+                    "color_hex": combination["top"]["color_hex"],
+                    "image": combination["top"]["image"]
+                },
+                "bottom": {
+                    "id": bottom_id,
+                    "type": bottom_type,
+                    "color_hex": combination["bottom"]["color_hex"],
+                    "image": combination["bottom"]["image"]
+                },
                 "message": message
             }
             recommendations.append(recommendation)
